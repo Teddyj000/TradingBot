@@ -1,46 +1,54 @@
-# EDGE / Strategy Studio
+# EDGE — Strategy Studio
 
-A mobile-first, single-page SPY strategy research app built with plain HTML, CSS, and JavaScript. No build step or trading API required.
+A mobile-first strategy editor, SPY research backtester, and **optional read-only Live Watch**. Deploy from this GitHub repository to Cloudflare Pages.
 
-## Features
+## What EDGE does
 
-- Six editable entry signal types: opening-range breakout, previous-day breakout, previous-day failed break/reclaim, premarket breakout, premarket failed break/reclaim, and VWAP reclaim/loss.
-- Five ready-to-edit strategy presets, each with editable direction, confirmation candles, breakout buffer, volume/VWAP filters, trading time window, stop and target rules.
-- Independent per-strategy backtests with an equity curve, R-multiple metrics, maximum drawdown, comparisons, and trade CSV export.
-- SPY 5-minute OHLCV CSV import and **clearly labeled synthetic** example candles to verify the app's behavior.
-- Simple option position-budget sliders (contracts, contract premium cap, OTM strike distance, intended premium stop percentage), with planned exposure versus worst-case premium loss.
-- Device-local strategy storage and JSON import/export backup. Responsive phone and desktop interface, plus installable web-app metadata.
+- Create, duplicate and edit multiple SPY trading strategies: opening-range breakout, previous-day high/low breakout, failed-break/reclaim, premarket levels and VWAP crossing.
+- Import historical five-minute SPY candle CSV files, or load clearly labeled synthetic demo data, to compare hypothetical *underlying SPY R-multiple* results. These are **not options profit-and-loss backtests**.
+- Edit risk limits: contract count, maximum cost per contract, OTM distance, bankroll and planned option premium stop.
+- Connect an optional, read-only SPY data feed and evaluate research signals **after a five-minute candle closes**. The Live Watch page refreshes about every 30 seconds while your browser is visible, and stops when it is paused or the browser is suspended.
+- Export/import your strategies as JSON; browser-local settings do not automatically sync between devices.
 
-## Run and deploy
+**EDGE does not submit any real or paper broker orders.** Live Watch does not yet price option contracts and cannot monitor independently while the iPhone browser is closed.
 
-The app loads from `index.html`. Publish this repository to Cloudflare Pages through the GitHub integration, using the `main` branch. Select no framework, no build command and use the repository root `/` as your output directory.
+## Free Cloudflare Pages deployment
 
-Once the Cloudflare deployment finishes, open the `pages.dev` URL in iPhone Safari, then **Share → Add to Home Screen**. GitHub commits to `main` should automatically trigger a new deployment if Cloudflare Git integration is enabled.
+Connect the repository to **Cloudflare Pages** using Git integration. Suggested settings: production branch **main**, framework **None**, build command **exit 0**, output directory **/**, repository root default.
 
-## Market-data format
+The optional endpoint is provided by **functions/api/spy.js**. It runs server-side so your broker market-data credentials never need to appear in publicly visible HTML or JavaScript.
 
-Import a CSV with a header and these columns:
+### Configure live data
 
-```csv
-date,time,open,high,low,close,volume
-2026-11-02,09:30,684.20,684.80,683.95,684.50,120000
-2026-11-02,09:35,684.50,684.67,683.80,684.10,96000
-```
+1. Choose a provider:
+   - **Alpaca Basic**: free market-data access with an Alpaca paper/trading account. Create API key ID and secret. The app explicitly uses the **IEX-only** feed, not the full consolidated US market. This can be sparse and materially misstate highs, lows, volume and VWAP compared with exchange-wide data. Alpaca's free options prices are indicative, not live consolidated OPRA quotes.
+   - **Tradier Lite**: its $0/month brokerage plan includes API access and live stock/options market data for eligible active account holders. Obtain a **production** brokerage API token, not the delayed sandbox token. EDGE currently uses Tradier for SPY five-minute equity bars, **not** for options chains.
+2. In the Cloudflare dashboard open **Workers & Pages → your project → Settings → Variables and Secrets → Add**. Add the following as **encrypted Secrets** to the production environment:
+   - **EDGE_VIEW_KEY**: a personal random access key, preferably at least 32 characters. This protects the feed endpoint. It is *not* a broker credential.
+   - **Either** ALPACA_KEY_ID and ALPACA_SECRET_KEY, **or** TRADIER_API_TOKEN.
+3. Save and redeploy if Cloudflare requests a new deployment for updated secrets.
+4. On iPhone Safari, open the Cloudflare Pages site → **Live watch** → enter your EDGE_VIEW_KEY value → **Connect feed**. The browser stores this gateway access key only in session storage; the actual broker data keys remain in Cloudflare. Add the website to the Home Screen if desired.
 
-- `date` + `time` or `datetime`/`timestamp`, `open`, `high`, `low`, `close` are required; `volume` is strongly recommended.
-- Bars are **5-minute candles timestamped by start time** and must cover the **entire regular session from 09:30 through 15:55 America/New_York** to be considered complete. No lookahead or gap-filling of missing regular candles.
-- Premarket strategies additionally require coverage from approximately **04:00 through 09:25 ET**. Previous-day strategies need the previous complete regular session. VWAP and relative-volume filters need volume data.
-- A datetime timestamp with an explicit `Z` or UTC offset is converted into New York time. Otherwise, date/time values are treated as Eastern time.
-- The entire file is parsed in the browser; there is no server-side data storage.
+If both providers are configured, Tradier takes priority.
 
-## Research assumptions and limitations
+**Never paste brokerage keys or the personal EDGE_VIEW_KEY into ChatGPT or GitHub.** Use Cloudflare encrypted Secrets and your own password manager. Do not distribute your private data-feed access to other people; providers may restrict market-data redistribution.
 
-**Not a live trading or options execution bot.** It does not connect to a brokerage, fetch live SPY prices, source real option chains or route orders. The historical simulator models SPY underlying price moves as **R-multiples**, not SPY option premium P/L. It omits option Greeks, spreads, fees, liquidity constraints, actual fills, and realistic execution latency. Premium stops and OTM sliders are illustrative position-budget controls, not inputs to historical SPY returns.
+## Accuracy and safety
 
-The simulator evaluates signals using **completed 5-minute closes**, then simulates entries at the *next bar's open*. A 5-minute-close stop likewise exits at the following bar's open. An intrabar touch stop assumes a stop price or a worse gap price; simultaneous stop/target touches are resolved conservatively in favor of the stop. Profit targets are idealized. Only one trade per day is simulated **per strategy**; combining multiple strategies does **not** enforce one portfolio-wide daily loss lockout. This is intentionally a research prototype, not evidence of live profitability.
+- An IEX-only feed does *not* represent all SPY market activity. It is suitable as a development prototype, **not an execution-grade 0DTE options feed**.
+- Entries, options prices and fills are not modeled from real-time option chains. The risk sliders give budgeting illustrations, not guaranteed exit prices or guaranteed loss limits.
+- Missing or stale five-minute bars suppress live triggers. A live-looking quote does not guarantee up-to-date or complete market coverage.
+- Live Watch is an active browser poll, **not** an always-on server bot, and never places orders.
+- Cloudflare Pages Functions count toward the Workers Free shared daily request quota. The free plan is suitable for an individual prototype, subject to the provider's terms and Cloudflare limits.
+- Historical and paper research alone cannot establish a profitable trading edge. We still need properly licensed quote history, out-of-sample evaluation, slippage modeling and extensive paper testing.
 
-Synthetic demo performance must never be interpreted as a profitable trading signal. Use real historical market data, realistic options quotes and out-of-sample testing before considering live trading.
+## Project files
 
-## Privacy and persistence
+- **index.html** — mobile strategy studio, research backtester and Live Watch interface.
+- **functions/api/spy.js** — protected read-only Cloudflare Pages Function. No order routes.
+- **icon.svg** and **manifest.webmanifest** — web app icons and manifest.
+- **README.md** — configuration guide.
 
-The repository and deployed Cloudflare Pages front end are publicly viewable. **Never put API keys, broker credentials, account numbers, or non-public trading data in this repository or browser code.** Strategy edits are saved in the browser's `localStorage` for the website's origin. They are **not automatically synchronized to GitHub**, another device, or another domain. Export a JSON backup before clearing browser data or changing domains.
+## Next development stages
+
+Evaluate data quality, add option-chain viewing with appropriate permissions, simulate realistic paper option orders and account-level risk, then evaluate whether any tested strategy offers an edge. Only consider real orders after independent safeguards and validation.
