@@ -1,0 +1,18 @@
+{
+  "name": "EDGE Strategy Studio",
+  "short_name": "EDGE",
+  "id": "/",
+  "description": "Design, compare and refine SPY trading strategies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090c11",
+  "theme_color": "#090c11",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
