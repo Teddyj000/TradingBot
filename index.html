@@ -19,19 +19,24 @@
 @media(max-width:760px){.wrap{padding:0 16px}.app-top{height:63px}.brand-mark{height:32px;width:32px}.brand-name{font-size:19px}.brand-sub{display:none}.top-button{padding:9px 11px}.status-pill{font-size:9px;padding:8px 10px}.layout{display:block;min-height:calc(100vh - 63px)}.main-nav{display:none}.main-area{padding:28px 0 113px}.mobile-tabs{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:22;background:#10151df2;border-top:1px solid #2a323b;padding:8px 11px calc(env(safe-area-inset-bottom) + 8px);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);justify-content:space-around;gap:5px}.mobile-tab{flex:1;display:flex;flex-direction:column;gap:3px;align-items:center;justify-content:center;padding:5px 4px;border:0;background:transparent;color:#8995a1;border-radius:9px;font-size:10px;font-weight:750}.mobile-tab.selected{color:var(--lime);background:#1b2821}.mobile-tab svg{stroke:currentColor;stroke-width:1.8;fill:none;width:19px;height:19px;stroke-linecap:round;stroke-linejoin:round}.page-heading{margin-bottom:20px}.page-heading h1{font-size:29px}.grid-studio{display:block}.library{margin-bottom:16px}.lib-header{padding:15px 14px 7px}.list-stra{flex-direction:row;overflow:auto;scroll-snap-type:x proximity;padding:4px 12px 12px}.strategy-item{flex:0 0 184px;scroll-snap-align:start}.strategy-glyph{width:30px;height:30px}.library-add{padding:11px 13px}.library-bottom{display:none}.editor-head{padding:21px 18px 18px}.editor-body{padding:22px 18px}.strategy-name{font-size:23px}.editor-bottom{padding:17px 16px;flex-wrap:wrap}.editor-bottom .hint{display:none}.editor-bottom-right{width:100%}.editor-bottom .button{flex:1}.two-fields,.three-fields{grid-template-columns:1fr 1fr}.data-strip{align-items:flex-start;flex-direction:column;gap:12px;padding:17px}.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat{padding:17px}.stat .value{font-size:25px}.risk-layout{grid-template-columns:1fr;gap:15px}.risk-layout .card{padding:22px}.detail-layout{grid-template-columns:1fr;gap:15px}.page-heading p{font-size:12px}.toast{bottom:calc(77px + env(safe-area-inset-bottom))}}
 @media(max-width:390px){.wrap{padding:0 12px}.page-heading h1{font-size:27px}.top-end .status-pill{display:none}.editor-body{padding:19px 15px}.two-fields,.three-fields{grid-template-columns:1fr}.risk-breakdown{grid-template-columns:1fr 1fr}.risk-hero .big{font-size:38px}.stat .value{font-size:22px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* Read-only live watch */
+.live-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:stretch}.live-quote,.live-connect{padding:23px;min-width:0}.live-quote{background:linear-gradient(145deg,#19241d,#121820 54%,#11161d)}.live-cap{display:flex;justify-content:space-between;align-items:center;gap:12px}.live-price{font-size:clamp(40px,5vw,61px);font-weight:780;letter-spacing:-2.8px;line-height:1.2;margin:21px 0 4px;font-variant-numeric:tabular-nums}.live-subrow,.live-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.live-chart{height:151px;margin:23px 0 16px;display:grid;place-items:center}.live-chart svg{width:100%;height:100%}.live-foot{border-top:1px solid #364135;padding-top:15px}.live-connect-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:11px}.live-connect h2{font-size:21px;letter-spacing:-.5px;margin:4px 0 0}.live-ping{height:10px;width:10px;border-radius:50%;background:#56626d}.live-ping.on{background:var(--lime);box-shadow:0 0 0 4px #c6ef7b1c}.live-label{display:block;color:var(--muted);font-size:11px;font-weight:720;margin:23px 0 8px}.live-input{height:44px;width:100%;color:var(--text);background:#191f28;border:1px solid #36404b;border-radius:9px;padding:0 12px;font-size:13px}.live-actions{display:flex;gap:9px;margin-top:11px}.live-actions .button{flex:1}.live-message{color:var(--muted);font-size:11px;min-height:37px;line-height:1.5;margin:16px 0 0;overflow-wrap:anywhere}.live-connect-note{font-size:10px;color:var(--faint);padding-top:13px;border-top:1px solid var(--line);margin-top:14px}.live-signals{margin-top:19px;overflow:hidden}.live-signals-head{padding:21px 23px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid var(--line)}.live-signals h2{margin:0;font-size:16px;letter-spacing:-.3px}.live-signals p{margin:4px 0 0;color:var(--muted);font-size:11px}.live-empty{padding:42px 24px;color:var(--muted);font-size:12px;text-align:center}.live-signal{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:16px 23px;border-top:1px solid #202831}.live-signal:first-child{border-top:0}.live-signal.trigger{background:#25342075}.live-signal-name{min-width:0;flex:1}.live-signal-name b{font-size:12px;display:block}.live-signal-name small{display:block;color:var(--muted);font-size:10.5px;margin-top:4px}.live-signal-meta{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap}.live-signal-status{font-size:10px;font-weight:780;letter-spacing:.6px;color:var(--muted);white-space:nowrap}.trigger .live-signal-status,.live-bias{color:var(--lime)}.live-bias{font-size:10px;font-weight:700;white-space:nowrap}.live-disclaimer{font-size:11px;color:var(--faint);line-height:1.6;margin:20px 4px}
+@media(max-width:1020px){.live-grid{grid-template-columns:1fr}}@media(max-width:760px){.live-quote,.live-connect{padding:18px}.live-signals-head{padding:18px}.live-signal{padding:14px 18px;align-items:flex-start}.live-signal-meta{max-width:42%;text-align:right}.live-price{font-size:47px}.live-signals-head p{max-width:230px}}
 </style>
 </head>
 <body>
 <header class="app-top"><div class="wrap top-flex">
  <a href="#" class="brand" id="brandHome" aria-label="EDGE strategy studio home"><span class="brand-mark">E</span><span class="brand-name">EDGE</span><span class="brand-sub">STRATEGY STUDIO</span></a>
- <div class="top-end"><span class="status-pill"><i class="status-dot"></i> Research mode</span><button class="top-button" id="topImport" type="button">Import data ↗</button></div>
+ <div class="top-end"><span class="status-pill" id="headerMode"><i class="status-dot"></i> PAPER ONLY</span><button class="top-button" id="topImport" type="button">Import data ↗</button></div>
 </div></header>
 <div class="wrap layout"><nav class="main-nav" aria-label="Main navigation">
  <p class="nav-label">WORKSPACE</p>
  <button class="nav-item selected" data-nav="studio" type="button"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16M8 4v6m8 0v5m-4 0v5"/></svg>Strategy studio</button>
  <button class="nav-item" data-nav="lab" type="button"><svg viewBox="0 0 24 24"><path d="M4 20V10m5 10V4m5 16v-8m5 8v-13"/></svg>Backtest lab</button>
- <button class="nav-item" data-nav="risk" type="button"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Risk controls</button>
- <div class="nav-foot"><b>Build. Test. Refine.</b>Strategies are saved in this browser. No live trades or brokerage connection.</div>
+ <button class="nav-item" data-nav="live" type="button"><svg viewBox="0 0 24 24"><path d="M2 12h5l3-7 4 14 3-7h5"/></svg>Live watch</button>
+    <button class="nav-item" data-nav="risk" type="button"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Risk controls</button>
+ <div class="nav-foot"><b>Build. Test. Refine.</b>Your rules stay in this browser. Live watch is read-only, with no brokerage orders.</div>
 </nav>
 <main class="main-area">
 <section class="screen active" id="screen-studio" aria-label="Strategy studio">
@@ -71,6 +76,32 @@
  <div class="detail-layout"><div class="card chart-panel"><div class="detail-head"><h2 id="chartName">Equity curve</h2><span class="muted-sm" id="chartInfo">Cumulative R</span></div><div id="chartTarget" class="chart-empty">Select a tested strategy to inspect its results.</div></div><div class="card trades-panel"><div class="detail-head"><h2>Recent test trades</h2><button type="button" class="button sm ghost" id="exportTrades">Export CSV ↓</button></div><div id="tradeList" class="trade-list"><p class="muted-sm">No trades yet.</p></div></div></div>
  <div class="lab-bottom" id="labCaveat">CSV candles must be timestamped at bar start in US Eastern time; full 09:30–15:55 sessions are required (premarket strategies also need 04:00–09:25 data). Tests use underlying SPY prices, not options premiums, fills, Greeks or live trades. Synthetic demo results are not predictive.</div>
 </section>
+<section class="screen" id="screen-live" aria-label="Live SPY strategy monitor">
+  <div class="page-heading"><div><span class="eyebrow">MARKETS / 02</span><h1>Live watch<span style="color:var(--lime)">.</span></h1><p>Real market candles. Your strategies. Zero automatic orders.</p></div><button type="button" class="button" id="liveRefresh" disabled>↻ Refresh</button></div>
+  <div class="live-grid">
+    <div class="card live-quote">
+      <div class="live-cap"><span class="eyebrow">SPY · S&P 500 ETF</span><span class="inline-tag neutral" id="liveStateTag">NOT CONNECTED</span></div>
+      <div class="live-price" id="livePrice">—</div>
+      <div class="live-subrow"><span id="livePriceDetail">Last completed five-minute candle</span><span id="liveAsOf">—</span></div>
+      <div class="live-chart" id="liveChart"><span class="muted-sm">Connect a data provider to watch SPY.</span></div>
+      <div class="live-foot"><span id="liveSource">No provider</span><span id="liveBarCount">—</span></div>
+    </div>
+    <div class="card live-connect">
+      <div class="live-connect-top"><div><span class="eyebrow">PRIVATE CONNECTION</span><h2>Market feed</h2></div><span class="live-ping" id="livePing"></span></div>
+      <p class="muted-sm">Use the EDGE access key you set in Cloudflare. Never enter your brokerage API keys here.</p>
+      <label for="liveAccess" class="live-label">EDGE access key</label>
+      <input id="liveAccess" type="password" class="live-input" placeholder="Enter private access key" autocapitalize="off" autocomplete="off" spellcheck="false">
+      <div class="live-actions"><button class="button primary" type="button" id="liveConnect">Connect feed</button><button class="button" type="button" id="livePause" disabled>Pause</button></div>
+      <p class="live-message" id="liveMessage" role="status">Waiting for connection. Cloudflare secrets must be configured first.</p>
+      <div class="live-connect-note">Refreshes about every 30 seconds while this browser tab is active. Pauses in the background. No push alerts or automatic trades.</div>
+    </div>
+  </div>
+  <div class="card live-signals">
+    <div class="live-signals-head"><div><h2>Strategy radar</h2><p>New rule triggers are evaluated only after a five-minute candle closes.</p></div><span class="inline-tag neutral" id="liveSignalTag">OFFLINE</span></div>
+    <div id="liveStrategyList"><div class="live-empty">Connect the market feed to see rule evaluations.</div></div>
+  </div>
+  <p class="live-disclaimer">Research/paper signals only. No options contracts are priced or traded here. A single-exchange feed can omit activity and distort high/low, volume or VWAP. Missing/stale candles suppress signals. Do not use as an execution system.</p>
+</section>
 <section class="screen" id="screen-risk" aria-label="Risk controls">
  <div class="page-heading"><div><span class="eyebrow">GUARDRAILS / 03</span><h1>Risk controls<span style="color:var(--lime)">.</span></h1><p>Know the dollars at stake before placing a trade.</p></div></div>
  <div class="risk-layout"><div class="card"><h2 class="risk-hed">Position limits</h2><div class="bankline"><label for="bankroll">Trading bankroll</label><input id="bankroll" type="number" min="1" max="100000000" inputmode="decimal" value="1500" aria-label="Trading bankroll in dollars"></div><div class="divider"></div>
@@ -82,13 +113,13 @@
  </div><div class="card"><h2 class="risk-hed">Your maximum exposure</h2><div class="risk-hero"><span class="overline">PLANNED LOSS AT YOUR STOP</span><div class="big" id="plannedLoss">$90</div><p id="riskPercent">6% of bankroll at your maximum contract price</p><span class="inline-tag warn" id="riskTier" style="display:inline-block;margin-top:12px">HIGH EXPOSURE</span></div><div class="risk-breakdown"><div class="risk-tile"><span>Full premium at risk</span><b id="worstLoss">$300</b></div><div class="risk-tile"><span>Max contracts at cap</span><b id="affordable">2</b></div></div><p class="risk-message" id="riskStatus"></p><div class="pane-alert" style="margin-top:15px">The exposure rating reflects dollars at risk, not the odds of winning. Premium stops can slip; you may lose the entire purchase.</div></div></div>
  <div class="section-gap"></div><div class="card card-pad"><h2 class="risk-hed" style="margin-bottom:8px">Your strategy library</h2><p class="muted-sm" style="margin:0">Presets and edits live in this browser. Export a backup before clearing Safari data or switching domains.</p><div class="stategies-backup"><button class="button sm" id="exportConfig" type="button">Export strategies JSON ↓</button><button class="button sm" id="importConfig" type="button">Import strategies JSON ↗</button><button class="button sm ghost danger" id="resetConfig" type="button">Restore default strategies</button></div></div>
 </section>
-<div class="footer">EDGE / Strategy Studio · Research only · No live data or broker orders</div>
+<div class="footer">EDGE / Strategy Studio · Optional read-only market feed · No broker orders</div>
 </main></div>
-<nav class="mobile-tabs" aria-label="Mobile navigation"><button class="mobile-tab selected" data-nav="studio" type="button"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16M8 4v6m8 0v5m-4 0v5"/></svg>Studio</button><button class="mobile-tab" data-nav="lab" type="button"><svg viewBox="0 0 24 24"><path d="M4 20V10m5 10V4m5 16v-8m5 8v-13"/></svg>Backtest</button><button class="mobile-tab" data-nav="risk" type="button"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Risk</button></nav>
+<nav class="mobile-tabs" aria-label="Mobile navigation"><button class="mobile-tab selected" data-nav="studio" type="button"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16M8 4v6m8 0v5m-4 0v5"/></svg>Studio</button><button class="mobile-tab" data-nav="lab" type="button"><svg viewBox="0 0 24 24"><path d="M4 20V10m5 10V4m5 16v-8m5 8v-13"/></svg>Backtest</button><button class="mobile-tab" data-nav="live" type="button"><svg viewBox="0 0 24 24"><path d="M2 12h5l3-7 4 14 3-7h5"/></svg>Live</button><button class="mobile-tab" data-nav="risk" type="button"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>Risk</button></nav>
 <input type="file" accept=".csv,text/csv" id="csvFile" class="hidden" aria-label="Import five minute SPY candles"><input type="file" accept="application/json,.json" id="jsonFile" class="hidden" aria-label="Import saved strategies"><div class="toast" role="status" id="toast" aria-live="polite"></div>
 <script>
 'use strict';
-// EDGE Strategy Studio / single-file static app. No real trading, live quotes, or order execution.
+// EDGE Strategy Studio / read-only live data is optional. No real order execution.
 const $=id=>document.getElementById(id), $$=selector=>[...document.querySelectorAll(selector)];
 const formatMoney=n=>'$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:0});
 const signedR=n=>(n>0?'+':'')+n.toFixed(2)+'R';
@@ -114,12 +145,12 @@ function clampNumber(value,min,max,fallback){const n=+value;return Number.isFini
 function newId(){return 's-'+Date.now().toString(36)+'-'+Math.floor(Math.random()*1e7).toString(36)}
 function current(){return strategies.find(s=>s.id===selectedId)||strategies[0]}
 function notify(text){const el=$('toast');el.textContent=text;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),3300)}
-function navigate(tab){['studio','lab','risk'].forEach(t=>$('screen-'+t).classList.toggle('active',t===tab));$$('[data-nav]').forEach(b=>{const yes=b.dataset.nav===tab;b.classList.toggle('selected',yes);if(yes)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});scrollTo({top:0,behavior:'auto'});}
+function navigate(tab){['studio','lab','live','risk'].forEach(t=>$('screen-'+t).classList.toggle('active',t===tab));$$('[data-nav]').forEach(b=>{const yes=b.dataset.nav===tab;b.classList.toggle('selected',yes);if(yes)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});scrollTo({top:0,behavior:'auto'});}
 function renderLibrary(){let list=$('strategyList');$('strategyCount').textContent=strategies.length+' strateg'+(strategies.length===1?'y':'ies');list.innerHTML=strategies.map(s=>`<button type="button" data-select="${escapeHTML(s.id)}" class="strategy-item ${s.id===selectedId?'active':''}" aria-pressed="${s.id===selectedId}"><div class="strategy-glyph">${s.setup==='orb'?'↗':s.setup==='vwapCross'?'≈':s.setup==='pdhReject'||s.setup==='pmReject'?'↶':'⌁'}</div><div class="strategy-info"><b>${escapeHTML(s.name)}</b><small>${escapeHTML(SETUP_NAMES[s.setup])}</small></div><span class="tiny-state ${s.enabled?'':'off'}"></span></button>`).join('');$$('[data-select]').forEach(b=>b.onclick=()=>{selectedId=b.dataset.select;store();renderLibrary();renderEditor()});}
 function timeOptions(){for(let min=575;min<=930;min+=5){let time=String(Math.floor(min/60)).padStart(2,'0')+':'+String(min%60).padStart(2,'0');for(const id of ['startTime','endTime']){$(id).add(new Option(time,time))}}}
 function describe(s){const signal={orb:'opening range',pdhBreak:'previous-day high / low',pdhReject:'failed break of previous-day high / low',pmBreak:'premarket high / low',pmReject:'failed break of premarket high / low',vwapCross:'VWAP'}[s.setup];const action=['pdhReject','pmReject'].includes(s.setup)?'reclaims or rejects':'breaks';return `Enter at the next 5-minute open when SPY ${action} ${signal} with ${s.confirm} confirming close${s.confirm===1?'':'s'}. ${s.vwapFilter?'VWAP alignment required. ':''}Stop: ${s.stopMode==='close'?'5-minute close':'price touch'}, target ${s.reward}R.`;}
 function renderEditor(){const s=current();if(!s)return;$('stratName').value=s.name;$('ruleSentence').textContent=describe(s);$('enabledLabel').textContent=s.enabled?'Enabled':'Disabled';$('enabledLabel').className='inline-tag '+(s.enabled?'':'neutral');$('toggleStrategy').textContent=s.enabled?'Disable':'Enable';$('editorKind').textContent='/ '+s.setup.toUpperCase();for(const id of ['setup','orLength','confirm','buffer','relVolume','startTime','endTime','stopType','stopDist','stopMode','reward'])$(id).value=s[id];$$('[data-direction]').forEach(b=>{const yes=b.dataset.direction===s.direction;b.classList.toggle('chosen',yes);b.setAttribute('aria-pressed',String(yes))});$('rangeWrap').classList.toggle('hidden',s.setup!=='orb');$('stopType').querySelector('[value="opposite"]').disabled=s.setup!=='orb';$('vwapFilter').classList.toggle('on',s.vwapFilter);$('vwapFilter').setAttribute('aria-checked',String(s.vwapFilter));$('stopDistLabel').textContent=s.stopType==='fixed'?'Fixed stop distance ($)':'Stop offset from level ($)';$('stopExplanation').textContent=s.stopMode==='close'?'A breached five-minute CLOSE exits at the next candle open, not at the stop price.':'A touch stop fills at the stop or worse after a gap. This still models underlying SPY, not options.';}
-function invalidateResults(){if(Object.keys(results).length){results={};lastRunFingerprint='';renderResults();}}
+function invalidateResults(){if(Object.keys(results).length){results={};lastRunFingerprint='';renderResults();}if(typeof renderLive==='function')renderLive();}
 function editField(id,value){const s=current();if(!s)return; if(['orLength','confirm','buffer','relVolume','stopDist','reward'].includes(id))value=Number(value);if(id==='stopDist')value=clampNumber(value,.05,10,.3);s[id]=value;if(id==='setup'&&s.setup!=='orb'&&s.stopType==='opposite')s.stopType='level';if((id==='startTime'||id==='endTime')&&s.startTime>s.endTime){if(id==='startTime')s.endTime=s.startTime;else s.startTime=s.endTime;}store();invalidateResults();renderEditor();renderLibrary();}
 function duplicate(){const s=current();if(strategies.length>=50){notify('Maximum 50 strategies.');return;}const clone={...s,id:newId(),name:(s.name+' copy').slice(0,44)};strategies.push(clone);selectedId=clone.id;store();invalidateResults();renderLibrary();renderEditor();notify('Strategy duplicated');}
 function addStrategy(){if(strategies.length>=50){notify('Maximum 50 strategies.');return;}let s={...DEFAULTS[0],id:newId(),name:'New strategy',enabled:true};strategies.push(s);selectedId=s.id;store();invalidateResults();renderLibrary();renderEditor();navigate('studio');$('stratName').focus();$('stratName').select();}
@@ -153,11 +184,106 @@ function curveSVG(values){const width=600,height=215,marginX=23,marginY=15,lo=Ma
 function renderDetail(){const r=results[resultSelectedId]||Object.values(results)[0];if(!r){$('chartName').textContent='Equity curve';$('chartInfo').textContent='Cumulative R';$('chartTarget').innerHTML='Select a tested strategy to inspect its results.';$('chartTarget').className='chart-empty';$('tradeList').innerHTML='<p class="muted-sm">No trades yet.</p>';return;}resultSelectedId=r.strategy.id;$('chartName').textContent=r.strategy.name;$('chartInfo').textContent=r.trades.length+' trades · '+r.eligible+' valid sessions';$('chartTarget').className='line-chart';$('chartTarget').innerHTML=r.trades.length?curveSVG(r.curve):'<div class="chart-empty">No valid signals on this dataset. Review time windows, data coverage and filters.</div>';$('tradeList').innerHTML=r.trades.length?r.trades.slice(-10).reverse().map(t=>`<div class="trade-line"><div><b>${escapeHTML(t.date)} · ${t.side==='long'?'CALL direction':'PUT direction'}</b><small>${escapeHTML(t.entryTime)} → ${escapeHTML(t.exitTime)} · ${escapeHTML(t.reason)}</small></div><strong class="${t.r>=0?'profit':'loss'}">${signedR(t.r)}</strong></div>`).join(''):'<p class="muted-sm">No trades. Try different settings or check the candle coverage.</p>';}
 function csvEscape(x){x=String(x??'');return /[",\n]/.test(x)?'"'+x.replaceAll('"','""')+'"':x;}
 function exportTrades(){const r=results[resultSelectedId]||Object.values(results)[0];if(!r||!r.trades.length){notify('No trades to export.');return;}let keys=['date','side','signal','entryTime','exitTime','entry','exit','level','stop','target','initialRisk','r','reason'];let csv=keys.join(',')+'\n'+r.trades.map(t=>keys.map(k=>csvEscape(t[k])).join(',')).join('\n');downloadFile('EDGE-'+r.strategy.id+'-backtest.csv',csv,'text/csv');notify('Trades exported');}
+// ─── Personal live watch (Cloudflare Pages Function, read-only) ───
+const live={active:false,busy:false,access:'',items:[],provider:'',coverage:'',note:'',at:null,error:'',refreshTimer:null};
+function clearLiveTimer(){if(live.refreshTimer){clearInterval(live.refreshTimer);live.refreshTimer=null}}
+function liveDisconnect(message='Paused. No background monitoring or brokerage orders.'){
+  clearLiveTimer();live.active=false;live.busy=false;$('liveConnect').disabled=false;$('livePause').disabled=true;$('liveRefresh').disabled=true;
+  $('liveMessage').textContent=message;renderLive();
+}
+function liveSpark(series){
+  if(series.length<2)return '<span class="muted-sm">Waiting for more candles.</span>';
+  const px=series.map(x=>x.close),lo=Math.min(...px),hi=Math.max(...px),range=Math.max(.001,hi-lo),w=620,h=135,pad=9;
+  const points=px.map((v,i)=>[pad+i*(w-2*pad)/(px.length-1),h-pad-(v-lo)/range*(h-2*pad)]);
+  const line=points.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1)).join(' '),last=points.at(-1),positive=px.at(-1)>=px[0],stroke=positive?'#c6ef7b':'#fb8d91';
+  const area=line+' L'+last[0].toFixed(1)+','+(h-pad)+' L'+pad+','+(h-pad)+' Z';
+  return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Recent five-minute candle closes; not a live tick chart"><defs><linearGradient id="liveArea" x1="0" x2="0" y1="0" y2="1"><stop stop-color="${stroke}" stop-opacity=".18"/><stop offset="1" stop-color="${stroke}" stop-opacity="0"/></linearGradient></defs><path d="${area}" fill="url(#liveArea)"/><path d="${line}" fill="none" stroke="${stroke}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${last[0]}" cy="${last[1]}" r="3.3" fill="${stroke}"/></svg>`;
+}
+function renderLive(){
+  $('livePing').classList.toggle('on',live.active&&!live.error);
+  $('liveStateTag').textContent=live.active?(live.error?'FEED ISSUE':'CONNECTED'):'OFFLINE';
+  $('liveSignalTag').textContent=live.active&&!live.error?'PAPER SIGNALS':'NOT MONITORING';
+  $('liveAccess').disabled=live.active;
+  $('headerMode').innerHTML='<i class="status-dot"></i> '+(live.active&&!live.error?'READ-ONLY LIVE':'PAPER ONLY');
+  const rows=live.items,spotET=easternFromDate(new Date()),latest=rows.filter(b=>b.date<spotET.date||(b.date===spotET.date&&minutes(b.time)+5<=minutes(spotET.time))).at(-1);
+  $('liveSource').textContent=live.provider?live.provider+' · '+live.coverage:'No provider';
+  $('liveBarCount').textContent=rows.length?rows.length.toLocaleString()+' five-minute candles':'—';
+  $('livePrice').textContent=latest?'$'+latest.close.toFixed(2):'—';
+  $('livePriceDetail').textContent=latest?'Last completed five-minute close':'No data yet';
+  $('liveAsOf').textContent=latest?latest.date+' · '+latest.time+' ET':'—';
+  $('liveChart').innerHTML=liveSpark(rows.filter(b=>latest&&b.date===latest.date&&b.time>='09:30'&&b.time<='15:55').slice(-65));
+  const days=rows.length?groupSessions(rows):[],day=days.find(x=>x.date===spotET.date);
+  const dow=new Date(spotET.date+'T12:00:00Z').getUTCDay(),withinMarket=dow>=1&&dow<=5&&spotET.time>='09:35'&&spotET.time<='16:05';
+  const confirmed=day?.rth.filter(b=>minutes(b.time)+5<=minutes(spotET.time))||[],candidate=confirmed.at(-1);
+  const freshness=candidate?minutes(spotET.time)-minutes(candidate.time):999;
+  const dataFresh=!!(live.active&&!live.error&&withinMarket&&candidate&&freshness<=15);
+  if(!live.active||!rows.length){$('liveStrategyList').innerHTML='<div class="live-empty">Connect the market feed to evaluate your strategies.</div>';return;}
+  const enabled=strategies.filter(x=>x.enabled);
+  if(!enabled.length){$('liveStrategyList').innerHTML='<div class="live-empty">Enable a strategy in Strategy studio to see it here.</div>';return;}
+  const evaluated=enabled.map(s=>{
+    let state='WATCHING',desc='Monitoring confirmed candles',side='—',css='';
+    if(!withinMarket){state='SESSION CLOSED';desc='No live signals outside the regular trading session';}
+    else if(!candidate){state='AWAITING DATA';desc='No confirmed five-minute SPY candle available';}
+    else if(!dataFresh){state='DATA STALE';desc='Feed missing recent completed candles';}
+    else if(candidate.time<s.startTime||candidate.time>s.endTime){state='OUTSIDE WINDOW';desc=s.startTime+'–'+s.endTime+' ET';}
+    else if((['pdhBreak','pdhReject'].includes(s.setup)&&!day.previousDay)||(['pmBreak','pmReject'].includes(s.setup)&&!day.premkt)){
+      state='NO REFERENCE';desc='Need sufficient previous-day or premarket candle coverage';
+    }else{
+      const i=day.rth.findIndex(b=>b.time===candidate.time);
+      const consecutive=i>=s.confirm&&Array.from({length:s.confirm+1},(_,j)=>i-j).every((k,j)=>k>=0&&(j===0||minutes(day.rth[k+1].time)-minutes(day.rth[k].time)===5));
+      if(!consecutive){state='GAPPED BARS';desc='Signal suppressed: missing five-minute candles';}
+      else if(s.setup==='orb'&&day.rth.slice(0,s.orLength/5).length<s.orLength/5){state='NO OPENING RANGE';desc='Opening range not complete';}
+      else{
+        for(const direction of ['long','short']){
+          if(s.direction!=='both'&&s.direction!==direction)continue;
+          if(isCross(s,day,i,direction)&&passesFilters(s,day,i,direction)){
+            state='RULE TRIGGER';side=direction==='long'?'CALL BIAS':'PUT BIAS';css='trigger';desc=candidate.time+' ET · 5-minute close · research signal only';break;
+          }
+        }
+        if(state==='WATCHING')desc='Last confirmed '+candidate.time+' ET · no trigger';
+      }
+    }
+    return `<div class="live-signal ${css}"><div class="live-signal-name"><b>${escapeHTML(s.name)}</b><small>${escapeHTML(desc)}</small></div><div class="live-signal-meta">${side!=='—'?'<span class="live-bias">'+side+'</span>':''}<span class="live-signal-status">${state}</span></div></div>`;
+  });
+  $('liveStrategyList').innerHTML=evaluated.join('');
+  $('liveSignalTag').textContent=dataFresh?'FRESH 5-MIN BARS':withinMarket?'LIMITED / STALE':'MARKET CLOSED';
+}
+async function pollLive(){
+  if(!live.active||live.busy||document.hidden)return;
+  live.busy=true;$('liveRefresh').disabled=true;
+  $('liveMessage').textContent='Checking SPY five-minute candles…';
+  try{
+    const response=await fetch('/api/spy',{method:'GET',headers:{'x-edge-view-key':live.access},cache:'no-store'});
+    let data;try{data=await response.json()}catch{throw Error('Cloudflare returned an invalid response. Check Pages Functions deployment.')}
+    if(!response.ok||!data.ok)throw Error(data.message||'Market feed is not available.');
+    if(!Array.isArray(data.bars))throw Error('Unexpected provider data shape.');
+    const rows=data.bars.filter(b=>b&&typeof b.date==='string'&&typeof b.time==='string'&&[b.open,b.high,b.low,b.close].every(Number.isFinite));
+    live.items=rows;live.at=data.asOf;live.provider=String(data.provider||'');live.coverage=String(data.coverage||'');live.note=String(data.note||'');live.error='';
+    const latest=rows.at(-1);$('liveMessage').textContent=rows.length?`${live.provider} connected · updated ${easternFromDate(new Date()).time} ET · last bar ${latest.date} ${latest.time} ET`:'Connected; no bars reported.';
+  }catch(e){live.error=String(e.message||'Connection failed');$('liveMessage').textContent=live.error;}
+  finally{live.busy=false;$('liveRefresh').disabled=!live.active;renderLive()}
+}
+function startLive(){
+  const key=$('liveAccess').value.trim();if(!key){notify('Enter your EDGE access key (not broker credentials).');$('liveAccess').focus();return;}
+  live.access=key;live.error='';live.active=true;
+  try{sessionStorage.setItem('edge.live.access',key)}catch{}
+  $('liveConnect').disabled=true;$('livePause').disabled=false;$('liveRefresh').disabled=false;
+  clearLiveTimer();pollLive();live.refreshTimer=setInterval(pollLive,30000);renderLive();
+}
+function attachLive(){
+  try{$('liveAccess').value=sessionStorage.getItem('edge.live.access')||''}catch{}
+  $('liveConnect').addEventListener('click',startLive);
+  $('livePause').addEventListener('click',()=>liveDisconnect());
+  $('liveRefresh').addEventListener('click',pollLive);
+  $('liveAccess').addEventListener('keydown',e=>{if(e.key==='Enter')startLive()});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&live.active)pollLive();});
+  renderLive();
+}
 function wireEvents(){timeOptions();$$('[data-nav]').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.nav)));$('brandHome').onclick=e=>{e.preventDefault();navigate('studio')};$('topImport').onclick=()=>$('csvFile').click();$('importData').onclick=()=>$('csvFile').click();$('csvFile').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{if(f.size>15e6)throw Error('CSV exceeds 15 MB.');const parsed=parseCSV(await f.text());setBars(parsed.bars,'CSV');if(parsed.bad)notify(parsed.bad+' invalid rows skipped');navigate('lab');}catch(err){notify(err.message)}e.target.value='';};$('demoData').onclick=()=>{setBars(demoBars(),'Synthetic demo');navigate('lab')};$('runAll').onclick=()=>runTests();$('testSelected').onclick=()=>runTests(selectedId);$('exportTrades').onclick=exportTrades;
  for(const id of ['addTop','addStrategy'])$(id).onclick=addStrategy;$('duplicateStrategy').onclick=duplicate;$('deleteStrategy').onclick=deleteSelected;$('toggleStrategy').onclick=()=>{const s=current();s.enabled=!s.enabled;store();invalidateResults();renderLibrary();renderEditor();};$('stratName').addEventListener('input',e=>{const s=current();s.name=e.target.value.slice(0,44)||'Untitled strategy';store();invalidateResults();renderLibrary();});$('stratName').addEventListener('blur',renderEditor);
  for(const id of ['setup','orLength','confirm','buffer','relVolume','startTime','endTime','stopType','stopMode','reward'])$(id).addEventListener('change',e=>editField(id,e.target.value));$('stopDist').onchange=e=>editField('stopDist',e.target.value);$$('[data-direction]').forEach(b=>b.onclick=()=>editField('direction',b.dataset.direction));$('vwapFilter').onclick=()=>editField('vwapFilter',!current().vwapFilter);
  for(const id of ['bankroll','maxContracts','priceCap','otmDollars','stopLossPct'])$(id).addEventListener('input',renderRisk);$('exportConfig').onclick=exportConfig;$('importConfig').onclick=()=>$('jsonFile').click();$('jsonFile').onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{if(f.size>2e6)throw Error('File exceeds 2 MB.');loadConfig(await f.text());}catch(err){notify('Import failed: '+err.message)}e.target.value=''};$('resetConfig').onclick=()=>{if(!confirm('Restore all five default strategies and replace your local edits? Export first to keep a backup.'))return;strategies=DEFAULTS.map(x=>({...x}));selectedId=strategies[0].id;store();invalidateResults();renderLibrary();renderEditor();notify('Default strategies restored')};}
-readStored();wireEvents();renderLibrary();renderEditor();riskInputs();renderResults();
+readStored();wireEvents();renderLibrary();renderEditor();riskInputs();renderResults();attachLive();
 </script>
 </body>
 </html>
