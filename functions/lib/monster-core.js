@@ -1,7 +1,7 @@
 // EDGE Monster Day detector. Research-only; never creates orders.
 // Pure signal math so historical tests and live evaluation use the same rules.
 const toMinute = (s) => {
-  if (typeof s !== 'string' || !/^\\d{2}:\\d{2}$/.test(s)) return -1;
+  if (typeof s !== 'string' || !/^\d{2}:\d{2}$/.test(s)) return -1;
   const h = Number(s.slice(0, 2)), m = Number(s.slice(3));
   return h < 24 && m < 60 ? h * 60 + m : -1;
 };
