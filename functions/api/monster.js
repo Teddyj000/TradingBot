@@ -1,5 +1,5 @@
 // Cloudflare Pages Function: authenticated, read-only monster-day research scanner.
-import {scanMonster, MONSTER_RULES} from '../lib/monster-core.js';
+import {scanMonster, MONSTER_RULES} from '../../lib/monster-core.js';
 const HEADERS={'content-type':'application/json; charset=utf-8','cache-control':'no-store, max-age=0','x-content-type-options':'nosniff','x-robots-tag':'noindex, nofollow'};
 const json=(payload,status=200)=>new Response(JSON.stringify(payload),{status,headers:HEADERS});
 const format=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
