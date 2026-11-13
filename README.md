@@ -52,3 +52,13 @@ If both providers are configured, Tradier takes priority.
 ## Next development stages
 
 Evaluate data quality, add option-chain viewing with appropriate permissions, simulate realistic paper option orders and account-level risk, then evaluate whether any tested strategy offers an edge. Only consider real orders after independent safeguards and validation.
+
+## New: SPY Monster Day Watch (research only)
+
+Open **Monster day watch** from EDGE's left navigation, or visit `/monster.html`. The dashboard evaluates completed SPY five-minute candles for unusually large opening shocks and later expansions, using QQQ, IWM, VWAP and **20 complete reference sessions** of SPY price/volume. The new authenticated endpoint is `/api/monster`. It uses the same `EDGE_VIEW_KEY` and encrypted Tradier/Alpaca provider secrets as Live Watch and **never places orders**.
+
+**Important:** The broad trend-expansion rule **lost −4.20R in the July–November test period**, and the rare opening-shock pattern appeared only four times. Both are research observations, *not profitable or validated trading recommendations*. Stop-distance readings are SPY price points, **not option premium limits**. See [the backtest report](research/BACKTEST_2026-11-12.md) for exact methodology and limitations.
+
+Tradier's regular-session five-minute `session_filter=open` feed supports approximately 40 calendar days of history, enough in ordinary trading calendars for 20 complete sessions; the scanner refuses to produce a signal when history is insufficient. Free Alpaca Basic is IEX-only, a single-exchange feed that can miss actual consolidated volume and levels, so Monster Watch **suppresses research alerts** on IEX rather than imply the backtest applies. Live monitoring requires the page open and visible; **no background iPhone notifications** or always-on automation are provided. A sound alert can be enabled by explicit user action, and is limited to rare opening shock observations. Existing `/api/spy` and the older Live Watch remain unchanged.
+
+Run unit tests via `npm test` (Node 22+) before deployment. Cloudflare Pages' existing no-build configuration continues to apply.
