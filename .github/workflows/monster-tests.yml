@@ -5,7 +5,7 @@ on:
   pull_request:
     paths:
       - 'functions/api/monster.js'
-      - 'functions/lib/monster-core.js'
+      - 'lib/monster-core.js'
       - 'tests/**'
       - 'package.json'
 jobs:
