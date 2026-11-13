@@ -17,3 +17,4 @@ jobs:
         with:
           node-version: '22'
       - run: npm test
+      - run: npx --yes wrangler@4 pages functions build --outdir=./dist-functions
