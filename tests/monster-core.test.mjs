@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {scanMonster, MONSTER_RULES} from '../functions/lib/monster-core.js';
+import {scanMonster, MONSTER_RULES} from '../lib/monster-core.js';
 const time=i=>{const minute=570+i*5;return String(Math.floor(minute/60)).padStart(2,'0')+':'+String(minute%60).padStart(2,'0');};
 function makeDay(date,{base=100,volume=100,length=78,dir=0,step=0.02}={}){
  const rows=[];let price=base;
