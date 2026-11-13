@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090c11"><title>EDGE — Monster Day Watch</title>
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<style>
+:root{color-scheme:dark;--bg:#090c11;--surface:#11171e;--surface2:#18212a;--line:#2b343d;--text:#f0f4f7;--muted:#a6b2bd;--lime:#c6ef7b;--red:#fa9696;--gold:#e8bd73}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{min-height:100dvh;background:radial-gradient(ellipse at 55% -20%,#23352660,transparent 60%),var(--bg)}button,input{font:inherit}button{cursor:pointer}
+.wrap{max-width:1130px;margin:auto;padding:26px clamp(18px,4vw,40px) 65px}.top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:5px 0 20px;gap:16px}.brand{color:var(--text);text-decoration:none;font-size:16px;font-weight:900;letter-spacing:-.4px}.brand span{display:inline-flex;align-items:center;justify-content:center;background:var(--lime);color:#131a0f;border-radius:9px;width:33px;height:33px;margin-right:9px;font-size:21px;font-style:italic}.top a.back{font-size:12px;text-decoration:none;color:var(--muted);border:1px solid var(--line);padding:10px 13px;border-radius:10px}.eyebrow{color:var(--lime);font-size:10px;font-weight:850;letter-spacing:2px;text-transform:uppercase}.headline{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:36px 0 23px}h1{font-size:clamp(30px,5vw,49px);line-height:1.05;letter-spacing:-1.8px;margin:10px 0 12px}p{color:var(--muted);font-size:13px;line-height:1.6;margin:0}.pill{border-radius:100px;border:1px solid #3c4434;background:#1d261c;color:var(--lime);font-size:10px;font-weight:850;letter-spacing:1px;padding:10px 13px;white-space:nowrap}
+.card{background:linear-gradient(140deg,#151c24,#10151b);border:1px solid var(--line);border-radius:17px;padding:23px}.connect{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:18px}.field{flex:1;min-width:200px}.field label{display:block;color:var(--muted);font-size:11px;margin-bottom:8px;font-weight:700}.field input{width:100%;height:45px;border:1px solid #47525c;background:#1c2530;color:#fff;border-radius:10px;padding:12px}.field input:focus{outline:2px solid #94bd60}button{background:var(--lime);color:#13200d;border:0;border-radius:10px;padding:13px 17px;font-weight:800;font-size:12px;min-height:45px}button.secondary{background:#202b36;color:var(--text);border:1px solid #394754}button:disabled{opacity:.4;cursor:not-allowed}button:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.dashboard{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:17px}.signal{border-color:#465245;min-height:230px}.signal.up{border-color:#6d9252;background:linear-gradient(120deg,#202f22,#11171e)}.signal.down{border-color:#b76e6e;background:linear-gradient(120deg,#352023,#11171e)}.signal.low{border-color:#87704e}.kicker{font-size:10px;letter-spacing:1.5px;color:var(--muted);font-weight:850;text-transform:uppercase}.large{font-size:clamp(26px,4.2vw,43px);letter-spacing:-1px;font-weight:900;line-height:1.13;margin:17px 0 13px}.signal.up .large{color:var(--lime)}.signal.down .large{color:var(--red)}.muted{color:var(--muted)}.detail{font-size:12px;line-height:1.65}.numbers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.number{border:1px solid var(--line);background:#121921;border-radius:11px;padding:14px;min-height:89px}.number b{display:block;font-size:22px;letter-spacing:-.6px;margin-top:8px;font-variant-numeric:tabular-nums}.number small{font-size:10px;color:var(--muted);display:block}.section{margin:28px 0 14px;display:flex;justify-content:space-between;align-items:center;gap:16px}.section h2{font-size:17px;margin:0;letter-spacing:-.3px}.paper{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:13px;padding:15px 17px;background:#10171d;color:#c7d1d8;margin-top:16px;line-height:1.55;font-size:12px}.paper strong{color:var(--text)}.paper .mark{color:var(--gold);font-size:18px}.table{width:100%;border-collapse:collapse;font-size:12px}.table th{text-align:left;color:#a8b4bf;font-size:11px;padding:13px 10px;border-bottom:1px solid var(--line)}.table td{padding:13px 10px;border-bottom:1px solid #27303a}.negative{color:var(--red)}.positive{color:var(--lime)}.footer{margin-top:23px;color:#8f9ea9;font-size:11px;line-height:1.7}.right{white-space:nowrap;text-align:right!important}.headrow{display:flex;justify-content:space-between;gap:12px;align-items:center}.last{font-size:11px;color:var(--muted);margin-top:10px}.statusline{color:var(--muted);font-size:12px;min-height:18px}.onoff{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.hidden{display:none!important}
+@media(max-width:740px){.dashboard{grid-template-columns:1fr}.headline{display:block}.headline .pill{display:inline-block;margin-top:12px}.wrap{padding:18px 17px 50px}.card{padding:18px}.connect button{flex:1}.section{align-items:flex-start}.numbers{gap:9px}.number{padding:11px}.number b{font-size:19px}.table{font-size:11px}}
+</style>
+</head>
+<body><div class="wrap">
+<header class="top"><a href="/" class="brand"><span>E</span> EDGE <small style="font-size:11px;color:var(--muted);letter-spacing:1.5px">/ MONSTER WATCH</small></a><a class="back" href="/">← Strategy Studio</a></header>
+<section class="headline"><div><div class="eyebrow">READ-ONLY · FIVE-MINUTE CONFIRMATION</div><h1>Catch the unusual<span style="color:var(--lime)">.</span></h1><p>SPY opening shocks, developing range expansion, and cross-market confirmation. No auto-trading.</p></div><div class="pill">RESEARCH / PAPER MODE</div></section>
+<section class="card">
+ <div class="connect"><div class="field"><label for="access">EDGE access key (stored only for this browser session)</label><input id="access" placeholder="Your Cloudflare EDGE_VIEW_KEY" type="password" autocomplete="off" spellcheck="false"></div>
+ <button id="connect">Connect scanner</button><button id="refresh" class="secondary" disabled>Refresh</button><button id="pause" class="secondary" disabled>Pause</button></div>
+ <div class="headrow"><div class="statusline" id="message" role="status" aria-live="polite">Not connected. Same read-only access key as Live Watch.</div><button id="sound" class="secondary" type="button" aria-pressed="false" style="font-size:11px;min-height:34px;padding:8px 11px">Sound off</button></div>
+ <div class="last" id="lastChecked">Only checks while this page is visible. Refreshes every 30 seconds.</div>
+</section>
+<div class="dashboard">
+ <section class="card signal" id="signalCard">
+ <div class="kicker" id="signalLabel">CURRENT STATUS</div><div class="large" id="signalHeadline">Waiting for data</div>
+ <p class="detail" id="signalDescription">Connecting does not place any orders. This scanner identifies unusual price movement; it does not provide validated entry signals.</p>
+ <div class="last" id="signalStamp"></div></section>
+ <section class="card"><div class="kicker">LIVE REFERENCE DATA</div><div class="numbers" style="margin-top:15px">
+ <div class="number"><small>SPY latest 5m close</small><b id="spot">—</b></div>
+ <div class="number"><small>Session range so far</small><b id="sessionRange">—</b></div>
+ <div class="number"><small>Opening range / median</small><b id="openingRatio">—</b></div>
+ <div class="number"><small>Opening volume / median</small><b id="volumeRatio">—</b></div>
+ <div class="number"><small>VWAP</small><b id="vwap">—</b></div>
+ <div class="number"><small>20-day median range</small><b id="medianRange">—</b></div>
+ </div></section>
+</div>
+<div class="paper"><span class="mark">⚠</span><div><strong>Not a proven trading edge.</strong> The broad expansion detector lost −4.20R in the held-out backtest. The opening shock rule produced positive simulated results on only four events. No option premiums, option spreads, Greeks, fills, or slippage were tested. A SPY move does not translate directly into an options return. Never use these research signals alone to buy 0DTE contracts.</div></div>
+<div class="section"><h2>Backtest evidence</h2><span class="muted" style="font-size:11px">March–November 2026 · Robinhood 5m SPY, QQQ, IWM</span></div>
+<section class="card" style="padding:7px 16px"><table class="table">
+<thead><tr><th>Rule</th><th class="right">Signals</th><th class="right">Wins</th><th class="right">Simulated total</th></tr></thead>
+<tbody>
+<tr><td>Opening shock</td><td class="right">4</td><td class="right">3</td><td class="right positive">+5.35R</td></tr>
+<tr><td>Broad expansion</td><td class="right">37</td><td class="right">11</td><td class="right negative">−7.69R</td></tr>
+<tr><td><strong>Combined detector</strong></td><td class="right">41</td><td class="right">14</td><td class="right negative">−2.34R</td></tr>
+<tr><td>Combined, held out July onward</td><td class="right">29</td><td class="right">9</td><td class="right negative">−4.20R</td></tr>
+</tbody></table></section>
+<div class="footer">Read-only monitoring requires the same Cloudflare secrets as EDGE Live Watch. Tradier uses its regular-session 5-minute time-sales feed; free Alpaca IEX-only data is deemed insufficient for a trustworthy signal and is suppressed. No push notifications: iOS may suspend this page in the background. Before executing any trade, check the current market and option quotes independently. Full methodology: <a href="https://github.com/Teddyj000/TradingBot/blob/main/research/BACKTEST_2026-11-12.md" target="_blank" rel="noopener noreferrer">backtest notes</a>.</div>
+</div>
+<script>
+'use strict';
+const el=id=>document.getElementById(id);
+let active=false,busy=false,timer=null,lastEvent='',soundEnabled=false,audio=null;
+const money=n=>Number.isFinite(n)?'$'+n.toFixed(2):'—';
+const num=n=>Number.isFinite(n)?n.toFixed(2)+'×':'—';
+const atMinutes=s=>typeof s==='string'?Number(s.slice(0,2))*60+Number(s.slice(3,5)):NaN;
+function msg(x){el('message').textContent=x;}
+function reset(){active=false;busy=false;clearInterval(timer);timer=null;el('connect').disabled=false;el('refresh').disabled=true;el('pause').disabled=true;}
+function alertBeep(){
+ if(!soundEnabled||!audio)return;
+ try{const o=audio.createOscillator(),g=audio.createGain();o.type='sine';o.frequency.value=740;g.gain.setValueAtTime(.0001,audio.currentTime);g.gain.exponentialRampToValueAtTime(.11,audio.currentTime+.03);g.gain.exponentialRampToValueAtTime(.0001,audio.currentTime+.36);o.connect(g).connect(audio.destination);o.start();o.stop(audio.currentTime+.4);}catch{}
+}
+function render(p){
+ const m=p.metrics||{},s=p.signal;
+ el('spot').textContent=money(m.spyClose);el('sessionRange').textContent=money(m.currentRange);
+ el('openingRatio').textContent=num(m.openingRangeRatio);el('volumeRatio').textContent=num(m.openingVolumeRatio);
+ el('vwap').textContent=money(m.vwap);el('medianRange').textContent=money(m.baselineMedianDailyRange);
+ el('lastChecked').textContent=p.provider+' · '+p.dateET+' '+p.timeET+' ET · history '+(p.coverage?.validHistory||0)+'/20 full sessions · '+(p.coverage?.currentBars||0)+' confirmed SPY candles · '+(p.stale?'STALE':'as returned');
+ const card=el('signalCard');card.classList.remove('up','down','low');
+ let title='Monitoring',desc='No qualifying unusual-range event has been detected using the available completed 5-minute bars.',label='WATCHING';
+ if(p.status==='UNRELIABLE_DATA_FEED'){title='IEX-only feed';label='INSUFFICIENT FEED COVERAGE';desc='Alpaca Basic watches a single exchange, not all SPY trades. Signals are suppressed because historical thresholds are based on broader market data.';}
+ else if(p.status==='WAITING_FOR_HISTORY'){title='Building baseline';label='NEED 20 COMPLETE SESSIONS';desc='The feed does not include 20 complete preceding trading days. No signals until a valid volume and range baseline is available.';}
+ else if(p.status==='INCOMPLETE_SPY_BARS'){title='Missing candles';label='DATA INCOMPLETE';desc='SPY five-minute bars have a gap. The detector refuses to guess missing prices.';}
+ else if(p.status==='STALE_DATA'){title='Data stale';label='NO CURRENT SIGNAL';desc='The latest regular-session candle is more than 12 minutes old. No alerts until the feed catches up.';}
+ else if(p.status==='MISSING_CONFIRMATION_BARS'){title='Confirmation missing';label='DATA NOT SYNCHRONIZED';desc='QQQ or IWM has no matching latest five-minute bar; current cross-market confirmation is unavailable.';}
+ else if(p.status==='OPENING_RANGE_BUILDING'){title='Opening range building';label='AWAITING 10:00 AM';desc='The detector needs six completed SPY five-minute candles before evaluating a shock event.';}
+ if(s){
+  label=s.type==='SHOCK'?'RARE OPENING SHOCK':'LOW-CONFIDENCE EXPANSION';
+  title=(s.side==='BEARISH'?'BEARISH':'BULLISH')+' · '+(s.type==='SHOCK'?'SHOCK':'EXPANSION');
+  desc=s.note+' Detected after the '+s.observedAt+' ET close at approximately '+money(s.signalPrice)+'. This is not a trade order or option-price prediction.';
+  card.classList.add(s.type==='SHOCK'?(s.side==='BEARISH'?'down':'up'):'low');
+  const key=p.dateET+'|'+s.type+'|'+s.observedAt;
+  const justFired=p.sessionOpen&&!p.stale&&atMinutes(p.timeET)-atMinutes(s.observedAt)<=7&&atMinutes(p.timeET)-atMinutes(s.observedAt)>=0;
+  if(lastEvent&&lastEvent!==key&&justFired&&s.type==='SHOCK')alertBeep();
+  lastEvent=key;
+ }
+ el('signalLabel').textContent=label;el('signalHeadline').textContent=title;el('signalDescription').textContent=desc;
+ el('signalStamp').textContent=!p.sessionOpen?'Market closed · last session observation':p.stale?'Signal suppressed while feed is stale':'Live research monitoring · no broker orders';
+}
+async function poll(){
+ if(!active||busy||document.hidden)return;
+ busy=true;el('refresh').disabled=true;msg('Refreshing confirmed five-minute market data…');
+ try{
+  const response=await fetch('/api/monster',{headers:{'x-edge-view-key':el('access').value.trim()},cache:'no-store'});
+  const p=await response.json();
+  if(!response.ok||!p.ok)throw Error(p.message||'Scanner unavailable');
+  render(p);msg(p.sessionOpen?'Connected · waiting for the next completed candle':'Connected · regular trading session closed');
+ }catch(err){msg(String(err.message||'Feed unavailable'));el('signalLabel').textContent='CONNECTION ERROR';el('signalHeadline').textContent='No reliable signal';el('signalDescription').textContent='The market feed could not be validated. No trade signal is available.';}
+ finally{busy=false;el('refresh').disabled=!active;}
+}
+function connect(){
+ if(!el('access').value.trim()){msg('Enter your EDGE access key.');el('access').focus();return;}
+ try{sessionStorage.setItem('edge.live.access',el('access').value.trim());}catch{}
+ active=true;el('connect').disabled=true;el('refresh').disabled=false;el('pause').disabled=false;
+ clearInterval(timer);timer=setInterval(poll,30000);poll();
+}
+el('connect').addEventListener('click',connect);
+el('refresh').addEventListener('click',poll);
+el('pause').addEventListener('click',()=>{reset();msg('Paused. No background monitoring is running.');});
+el('access').addEventListener('keydown',e=>{if(e.key==='Enter')connect();});
+el('sound').addEventListener('click',async()=>{
+ soundEnabled=!soundEnabled;
+ if(soundEnabled){try{const A=window.AudioContext||window.webkitAudioContext;if(A){audio=audio||new A();await audio.resume();}}catch{soundEnabled=false;}}
+ el('sound').textContent=soundEnabled?'Shock sound on':'Sound off';el('sound').setAttribute('aria-pressed',String(soundEnabled));
+});
+document.addEventListener('visibilitychange',()=>{if(active&&!document.hidden)poll();});
+try{el('access').value=sessionStorage.getItem('edge.live.access')||'';}catch{}
+</script>
+</body></html>
